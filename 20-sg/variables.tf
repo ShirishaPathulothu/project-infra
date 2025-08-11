@@ -55,3 +55,9 @@ variable "vpn_sg_tags" {
         Component = "vpn"
     }
 }
+
+variable "web_alb_sg_tags" {
+    default = {
+        Component = "web-alb"
+    }
+}
