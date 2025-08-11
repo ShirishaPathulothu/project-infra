@@ -160,8 +160,8 @@ resource "aws_lb_listener_rule" "host_based_weighted_routing" {
   }
 
   condition {
-    field = "host_header" 
-    values = ["${var.backend_tags.Component}.app.${var.environment}.${var.zone_name}"]
-    
+    host_header {
+      values = ["${var.backend_tags.Component}.app.${var.environment}.${var.zone_name}"]
+    }
   }
-}
+} 
